@@ -7,11 +7,32 @@ const emailValid = ()=>{
 
     if(!pattern1.test(inputValue)){
         console.log('your are not sure');
-        document.getElementById('message').innerText = 'Enter the Valid Email'
+        setTimeout(showMessage(true), 300)
+        // showErrorMessage();
     }else{
-        document.getElementById('message').innerText = ''
-        
+        setTimeout(removeMessage, 300)
+        // removeErrorMessage();
     }
     input.value = '';
+
+}
+// error message show up 
+const message = document.getElementById('message');
+const errorId = document.getElementById('error');
+const showMessage=(isValid)=>{
+    errorId.style.visibility = 'visible';
+    errorId.style.width = '200px'
+    if(isValid){
+        message.innerText = 'Your Email is Valid';
+        errorId.style.background = 'green';
+    }else{
+        message.innerText = 'Your Email is not Valid';
+        errorId.style.background = 'red';
+    }
+}
+const removeMessage=()=>{
+    message.innerText = '';
+    errorId.style.width = '0px'
+    errorId.style.visibility = 'hidden';
 
 }
