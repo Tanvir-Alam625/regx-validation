@@ -10,22 +10,54 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
         }
         .container{
             height: 100vh;
             width: 100%;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.322),rgba(0, 0, 0, 0.336)),url(./images/104-1042524_email-message-and-sms-symbols.png);
+            background-image: linear-gradient(rgba(22, 153, 177, 0.096),rgba(17, 148, 235, 0.096)),url(./images/104-1042524_email-message-and-sms-symbols.png);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: aliceblue;
+        }
+        .sm-container{
+            height: calc(100vh - 30vh);
+            width: calc(100% - 20%);
+            background-image: linear-gradient(rgba(3, 25, 66, 0.801),rgba(38, 4, 46, 0.863)),url(./images/104-1042524_email-message-and-sms-symbols.png);
+            background-size: cover;
+            border-radius: 7px;
+            box-shadow: 0px 1px 12px rgba(146, 146, 146, 0.479);
         }
         h2{
             font-size: 3em;
-            font-family: 'Courier New', Courier, monospace;
             text-align: center;
+            padding: 30px 0;
+            text-transform: capitalize;
         }
         .from{
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+        }
+        input,button{
+            font-size: 2em;
+            padding: 12px 25px;
+            border: .5px solid #fff;
+            color:#fff;
+            background-color: transparent;
+            outline: 0;
+            border-radius: 5px;
+        }
+        button{
+            transition: 300ms ease-in-out;
+            cursor: pointer;
+        }
+        button:hover{
+            background: #fff;
+            color: #000;
         }
     </style>
 </head>
@@ -36,8 +68,8 @@
                 put your valid email 
             </h2>
             <div class="from">
-                <input type="text" placeholder="Email"><br>
-                <button>submit</button>
+                <input id="input-field" type="text" placeholder="Email"><br>
+                <button onclick="emailValid()">Submit</button>
             </div>
         </div>
     </section>
