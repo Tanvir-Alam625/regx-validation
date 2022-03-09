@@ -5,8 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>from validation regex</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.322),rgba(0, 0, 0, 0.336)),url(./images/104-1042524_email-message-and-sms-symbols.png);
+        }
+        h2{
+            font-size: 3em;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+        .from{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
 </head>
 <body>
+    <section class="container">
+        <div class="sm-container">
+            <h2>
+                put your valid email 
+            </h2>
+            <div class="from">
+                <input type="text" placeholder="Email"><br>
+                <button>submit</button>
+            </div>
+        </div>
+    </section>
     
 </body>
 </html>
